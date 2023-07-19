@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import BackImg from "../assets/bg-card-back.png";
+import BackImg from "../../public/public/bg-card-back.png";
 
 export const BackCard = ({ cardCvc }) => {
   const defaultCardCvc = cardCvc || "000";
