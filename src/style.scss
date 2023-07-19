@@ -1,0 +1,251 @@
+@import url(https://fonts.bunny.net/css?family=space-grotesk:500);
+
+$prim-clr-1-grad: #6448fe;
+$prim-clr-2-grad: #600594;
+
+$prim-clr-1: #ff5252;
+
+$neutral-clr-1: #ffffff;
+$neutral-clr-2: #dedddf;
+$neutral-clr-3: #8e8593;
+$neutral-clr-4: #21092f;
+
+* {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url("../public/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main-cont {
+  display: grid;
+  grid-template-columns: 35rem 30rem;
+  grid-template-rows: 33rem;
+  gap: 8rem;
+
+  .cards-wrapper {
+    display: grid;
+    gap: 2rem;
+
+    .front-card,
+    .back-card {
+      box-shadow: 0px 0px 15px 0px $neutral-clr-4;
+    }
+
+    img {
+      display: block;
+      border-radius: 0.75rem;
+    }
+
+    $card-padding: 1.5rem;
+
+    .front-card-wrapper {
+      width: min-content;
+      position: relative;
+
+      .card-logo {
+        top: $card-padding;
+        left: $card-padding;
+      }
+
+      .card-number {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        bottom: 2.5rem;
+        left: $card-padding;
+        color: $neutral-clr-1;
+        margin: 0;
+        bottom: 5rem;
+      }
+
+      .card-name {
+        bottom: $card-padding;
+        left: $card-padding;
+        margin: 0;
+        text-transform: uppercase;
+        color: $neutral-clr-1;
+        margin: 0;
+      }
+
+      .card-date {
+        bottom: $card-padding;
+        right: $card-padding;
+        margin: 0;
+        font-size: 0.95rem;
+        color: $neutral-clr-1;
+        margin: 0;
+      }
+    }
+
+    .back-card-wrapper {
+      width: min-content;
+      position: relative;
+      justify-self: end;
+
+      .card-cvc {
+        right: 3.5rem;
+        bottom: 7.35rem;
+        color: $neutral-clr-1;
+        margin: 0;
+      }
+    }
+
+    .front-card-wrapper > *:not(.front-card),
+    .back-card-wrapper > *:not(.back-card) {
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  .form-wrapper {
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: center;
+
+    label,
+    p {
+      width: fit-content;
+      height: fit-content;
+      font-size: 0.99rem;
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    input {
+      padding: 0.7rem;
+      border: 1.5px solid $neutral-clr-2;
+      outline: none;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      transition: border-color ease-in-out 200ms;
+
+      &::placeholder {
+        color: $neutral-clr-3;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $prim-clr-2-grad;
+      }
+    }
+
+    .name-box,
+    .number-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .date-n-cvc-wrapper {
+      display: flex;
+      gap: 1rem;
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      #month-inp,
+      #year-inp {
+        width: 5rem;
+      }
+
+      .cvc-wrapper {
+        position: relative;
+      }
+
+      .date-wrapper {
+        position: relative;
+
+        .two-grid-inp-box {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+
+  .thank-you-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-direction: column;
+
+    .comp-title {
+      text-transform: uppercase;
+      color: $neutral-clr-4;
+      margin: 0;
+    }
+
+    .comp-para {
+      color: $neutral-clr-3;
+      margin: 0;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+
+  .inp-error {
+    color: $prim-clr-1;
+    font-size: 0.8rem !important;
+    position: absolute;
+    margin: 0;
+    bottom: -1.25rem;
+    left: 0;
+  }
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: $neutral-clr-4;
+  color: $neutral-clr-1;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding-block: 1rem;
+  font-size: 1.2rem;
+  transition: background-color ease-in-out 200ms;
+
+  &:hover {
+    background-color: lighten($neutral-clr-4, 10%);
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
