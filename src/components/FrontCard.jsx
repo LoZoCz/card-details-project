@@ -9,7 +9,7 @@ export const FrontCard = ({ cardName, cardNumber, cardMonth, cardYear }) => {
   return (
     <div className="front-card-wrapper">
       <img
-        src="../public/bg-card-front.png"
+        src="./assets/bg-card-front.png"
         alt="front of a card"
         className="front-card"
       />
