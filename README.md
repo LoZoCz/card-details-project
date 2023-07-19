@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/interactive-card-details-form-in-react-first-react-project-VbpGlIsZ3d)
 - Live Site URL: [Github Page](https://lozocz.github.io/card-details-project/)
 
 ## My process
